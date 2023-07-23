@@ -2,7 +2,7 @@ import React, { FunctionComponent, useEffect, useState } from 'react';
 import Card from '../interfaces/Card';
 import { getCard, deleteCard } from '../services/CardService';
 import { Link } from 'react-router-dom';
-import { addToFav, removeFromFav, checkIfInFav } from '../services/favService';
+import { addToFav, removeFromFav, checkIfInFav, getFav } from '../services/favService';
 import { successMsg } from '../services/feedbackServicw';
 
 interface HomeProps {
@@ -16,21 +16,16 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cards }) => {
   const [favoriteCards, setFavoriteCards] = useState<number[]>([]);
 
   useEffect(() => {
-    getCard()
-      .then((res) => setCardsList(res.data))
-      .catch((err) => console.log(err));
+    
+   getFav(userInfo.userId).then((res)=>{
+    let userFavorites = res.data.find((fav:any) => fav.userId === userInfo.userId);
+    let defaultCardIds: number[] = userFavorites?.cards.map((card:any) => card.id) || []; 
+    setFavoriteCards(defaultCardIds)   }).catch((err)=>console.log(err))
+   getCard().then((res) => setCardsList(res.data))
+   .catch((err) => console.log(err));  
   }, []);
 
-  useEffect(() => {
-    if (userInfo.userId) {
-      const cardIds = cardsList
-        .map((card) => card.id)
-        .filter((id) => id !== undefined) as number[];
-      checkIfInFav(userInfo.userId, cardIds)
-        .then((res) => setFavoriteCards(res.data))
-        .catch((err) => console.log(err));
-    }
-  }, [userInfo.userId, cardsList]);
+  
 
   const handleDelete = (id: number) => {
     if (window.confirm('Are you sure?')) {
