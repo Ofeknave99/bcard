@@ -1,13 +1,92 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import"../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&family=IBM+Plex+Sans:ital,wght@1,100&family=Rubik+Wet+Paint&display=swap');
+
+body{
+  background-color: #8f8383;
+   margin-bottom: 40px;
+   height: 100%;
+}
+.dark-mode .about-class  {
+  background-color: black;
+  color: white;
+  
+}
+.dark-mode {
+  background-color: black;
+  color: aliceblue;
+  height: 100vh;
+}
+body.dark-mode {
+  background-color: black;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body.dark-mode .App {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode .about-class {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode .footer-content {
+  background-color: #333;
+  color: white;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  color: #333;
+ font-size: 10px;
+}
+
+
+
+.about-class {
+  
+  background-color: #ab9898;
+ 
+  color: #333;
+  font-size: 27px;
+  padding: 20px;
+  font-family:Caveat ;
+}
+
+.footer-content {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  color: #333;
+ 
+
+  
+}
+.icon-container {
+  display: flex;
+ justify-content: center;
+  text-align: center;
+  width: 100%; 
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+
+h1{
+ font-family:Caveat ; 
+}
+h3{
+  font-family:Caveat ;
 }
