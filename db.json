@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "ofek nave",
-      "password": "12345678",
+      "password": "Ofek1234.",
       "email": "ofeknave99@gmail.com",
       "phone": 1234567890,
       "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=75217&width=240&height=305",
@@ -17,7 +17,7 @@
     },
     {
       "name": "yarin",
-      "password": "123456789",
+      "password": "Yarin1234.",
       "email": "yarin508020@gmail.com",
       "role": "business",
       "phone": "0507385053",
@@ -31,19 +31,36 @@
       "id": 2
     },
     {
-      "name": "משה",
-      "password": "12345678",
-      "email": "mosh@gmail.com",
+      "name": "raz",
+      "lastName": "cohen",
+      "password": "Raz12345.",
+      "email": "razcoher213@gmail.com",
       "role": "regular",
-      "phone": "0506656656",
-      "image": "ascs",
+      "phone": "0507385053",
+      "image": "https://th.bing.com/th/id/R.1271b241fac7a1b01225cd0410c434ad?rik=ihMJXATVGp5B2Q&pid=ImgRaw&r=0",
       "city": "קרית שמונה",
-      "housenumber": 8,
+      "housenumber": 15,
       "country": "ישראל",
       "street": "דן",
-      "state": "ישראל",
       "zip": 12212,
-      "id": 9
+      "state": "isreal",
+      "id": 10
+    },
+    {
+      "name": "eran",
+      "lastName": "nave",
+      "password": "Eran1234.",
+      "email": "eranave73@gmail.com",
+      "role": "regular",
+      "phone": "0507385053",
+      "image": "https://th.bing.com/th/id/R.1271b241fac7a1b01225cd0410c434ad?rik=ihMJXATVGp5B2Q&pid=ImgRaw&r=0",
+      "city": "קרית שמונה",
+      "housenumber": 5,
+      "country": "ישראל",
+      "street": "דן",
+      "zip": 12212,
+      "state": "isreal",
+      "id": 11
     }
   ],
   "cards": [
@@ -51,16 +68,16 @@
       "title": "top-space",
       "sutitle": "מצבעה תעופתית",
       "description": "Description 1",
-      "phone": "05073802503",
-      "email": "card1@example.com",
+      "phone": "0507385053",
+      "email": "ofeknave99@gmail.com",
       "web": "www.card1.com",
       "image": "https://www.tpsp.co.il/wp-content/uploads/2021/02/68e75fece55700e8dc8b3f8505d852a7_header.jpg",
       "state": "State 1",
-      "country": "isreal",
-      "city": "karit motzkin",
-      "street": "harosht",
-      "Hosenumber": 20,
-      "zip": 12345,
+      "country": "ישראל",
+      "city": "חיפה",
+      "street": "55",
+      "Hosenumber": 555,
+      "zip": 12212,
       "id": 1
     },
     {
@@ -181,6 +198,18 @@
       ],
       "active": true,
       "id": 7
+    },
+    {
+      "userId": 10,
+      "cards": [],
+      "active": true,
+      "id": 8
+    },
+    {
+      "userId": 11,
+      "cards": [],
+      "active": true,
+      "id": 9
     }
   ]
 }

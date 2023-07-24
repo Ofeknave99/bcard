@@ -68,8 +68,10 @@ const Register: FunctionComponent<RegisterProps> = ({ setUserInfo }) => {
     },
     validationSchema: yup.object({
       name: yup.string().required(),
-      lastname: yup.string().required(),
-      password: yup.string().required().min(8),
+      lastName: yup.string().required("last name is required"),
+      password:yup.string().required().min(8)
+  .matches(/[A-Z]/, 'הסיסמה חייבת לכלול לפחות אות גדולה אחת')
+  .matches(/[!@#$%^&*(),.?":{}|<>]/, 'הסיסמה חייבת לכלול לפחות תו מיוחד אחד'),
       email: yup.string().required().email(),
       city: yup.string().required(),
       housenumber:yup.number().required(),
@@ -209,6 +211,9 @@ const Register: FunctionComponent<RegisterProps> = ({ setUserInfo }) => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
+          {formik.touched.city && formik.errors.city ? (
+            <div className="text-danger">{formik.errors.city}</div>
+          ) : null}
         </div>
         <div className="mb-3">
           <label htmlFor="housenumber" className="form-label">
@@ -223,6 +228,9 @@ const Register: FunctionComponent<RegisterProps> = ({ setUserInfo }) => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
+           {formik.touched.housenumber&& formik.errors.housenumber ? (
+            <div className="text-danger">{formik.errors.housenumber}</div>
+          ) : null}
         </div>
         <div className="mb-3">
           <label htmlFor="country" className="form-label">
@@ -237,6 +245,9 @@ const Register: FunctionComponent<RegisterProps> = ({ setUserInfo }) => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
+          {formik.touched.country&& formik.errors.country? (
+            <div className="text-danger">{formik.errors.country}</div>
+          ) : null}
         </div>
         <div className="mb-3">
           <label htmlFor="street" className="form-label">
@@ -251,6 +262,9 @@ const Register: FunctionComponent<RegisterProps> = ({ setUserInfo }) => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
+          {formik.touched.street&& formik.errors.street? (
+            <div className="text-danger">{formik.errors.street}</div>
+          ) : null}
         </div>
         <div className="mb-3">
           <label htmlFor="zip" className="form-label">

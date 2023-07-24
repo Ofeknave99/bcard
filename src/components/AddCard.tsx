@@ -140,6 +140,7 @@ const AddCard: FunctionComponent<AddCardProps> = () => {
               Email
             </label>
             <input
+            placeholder="Put the email you used to connect to the website so you can edit your card"
               type="email"
               id="email"
               name="email"

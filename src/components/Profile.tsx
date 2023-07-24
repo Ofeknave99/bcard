@@ -19,6 +19,7 @@ const Profile: FunctionComponent<ProfileProps> = () => {
 
   return (
     <>
+    <div className="container col-md-3 mt-5 vh-100 r">
       <div className="card">
         <div className="card-title">
           {userInfo?.name}
@@ -35,6 +36,7 @@ const Profile: FunctionComponent<ProfileProps> = () => {
 {userInfo?.role === "admin" && <p>admin user</p>}
 
         </div>
+      </div>
       </div>
     </>
   );
