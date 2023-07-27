@@ -85,23 +85,30 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cards }) => {
           <i className="fa-solid fa-address-card"> Add Card</i>
         </Link>
       )}
+       
       {cardsList.length ? (
-        <div className="container mb-2">
+        <div className="container mb-2 ">
           <div className="row">
             {cardsList.map((card: Card) => (
+              
               <div
                 key={card.id}
                 className="card col-md-4 mx-2 mb-3"
                 style={{ width: '18rem' }}
               >
+                  <Link to={`/CardShow/${card.id}`}>
                 <img
                   src={card.image}
                   className="card-img-top"
                   alt={card.title}
                   style={{ width: '100%', height: '16.5rem' }}
-                />
+                /> 
+                </Link>
+           
                 <hr />
+                
                 <div className="card-body">
+                  
                   <h5 className="card-title">{card.title}</h5>
                        <hr />
                         <p className="card-text "> {card.sutitle}</p>
@@ -158,11 +165,13 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cards }) => {
 </button>
 
                 </div>
+                
               </div>
             ))}
             
           </div>
         </div>
+        
       ) : (
         <p>No cards</p>
       )}

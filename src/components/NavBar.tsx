@@ -61,7 +61,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ userInfo, setUserInfo, darkMod
             )}
             {userInfo.role === "admin" && (
               <li className="nav-item">
-                <NavLink className="nav-link" to="/SANDCARDS">
+                <NavLink className="nav-link" to="/SenBox">
                   SANDBOX
                 </NavLink>
               </li>

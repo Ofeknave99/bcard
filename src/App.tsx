@@ -15,6 +15,8 @@ import Fav from './components/Fav';
 import MyCard from './components/MyCard';
 import { addCard } from './services/CardService';
 import UpdateCard from './components/UpdateCard';
+import SenBox from './components/SenBox';
+import CardShow from './components/CardShow';
 
 interface UserInfo {
   email: string | false;
@@ -51,6 +53,8 @@ const App: FunctionComponent = () => {
           <Route path="/Home" element={<Home userInfo={userInfo} cards={[]} />} />
           <Route path="/Register" element={<Register setUserInfo={setUserInfo} />} />
           <Route path="/Profile" element={<Profile />} />
+          <Route path="/SenBox" element={<SenBox />} />
+           <Route path="/CardShow/:id" element={<CardShow />} />
           <Route path="/AddCard" element={<AddCard />} />
           <Route path="/update/Card/:id" element={<UpdateCard />} />
           <Route path="/Fav" element={<Fav userInfo={userInfo} />} />

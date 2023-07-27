@@ -60,7 +60,7 @@ const Login: FunctionComponent<LoginProps> = ({ setUserInfo }) => {
     <>
    
       <h3 className="display-3 mt-">LOGIN</h3>
-      <div className="container col-md-3 mt-5 vh-100 r ">
+      <div className="container col-md-3 mt-5 vh-100  vw-100 ">
         <form onSubmit={formik.handleSubmit}>
           <div className="form-floating mb-3">
             <input

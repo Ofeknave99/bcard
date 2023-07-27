@@ -30,6 +30,7 @@ const AddCard: FunctionComponent<AddCardProps> = () => {
       street: "",
       Hosenumber: undefined,
       zip: undefined,
+      
      
     },
     validationSchema: yup.object({
@@ -192,6 +193,7 @@ const AddCard: FunctionComponent<AddCardProps> = () => {
               State
             </label>
             <input
+               placeholder="You can put a link to a map of your business location"
               type="text"
               id="state"
               name="state"

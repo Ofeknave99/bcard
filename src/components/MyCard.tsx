@@ -14,10 +14,10 @@ const MyCard: FunctionComponent<MyCardProps> = ({ userInfo, cards }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    getCardByEmail(userInfo.email) // Pass the email as an argument
+    getCardByEmail(userInfo.email) 
       .then((res) => setCardsList(res.data))
       .catch((err) => console.log(err));
-  }, [userInfo.email]); // Add userInfo.email to the dependency array
+  }, [userInfo.email]); 
 
   const handleDelete = (id: number) => {
     if (window.confirm('Are you sure?')) {
@@ -32,6 +32,7 @@ const MyCard: FunctionComponent<MyCardProps> = ({ userInfo, cards }) => {
 
   return (
     <>
+     <div className="container col-md-3 mt-5 vh-100  vw-100 ">
     <h1>your cards</h1>
       {cardsList.length ? (
         <div className="container mb-2">
@@ -85,6 +86,7 @@ const MyCard: FunctionComponent<MyCardProps> = ({ userInfo, cards }) => {
       ) : (
         <p>No cards</p>
       )}
+      </div>
     </>
   );
 };
