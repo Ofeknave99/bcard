@@ -20,13 +20,15 @@ const CardShow: FunctionComponent = () => {
   return (
     <>
      <div className="container col-md-3 mt-5 vh-100%  vw-100  "  >
-      <h1 style={{backgroundColor:"black" ,color:"white"}}>{card.title}</h1>
-       <img
+      <img
                   src={card.image}
                   className="card-img-top"
                   alt={card.title}
-                  style={{ width: '30%', height: '16.5rem' }}
+                  style={{ width: '40%', height: '16.5rem',borderRadius:20 }}
                 />
+                <br /><br />
+      <h1 style={{backgroundColor:"black" ,color:"white"}}>{card.title}</h1>
+       
       <p style={{fontFamily:"Caveat",fontSize:"3rem"}}>{card.sutitle}</p>
       <p style={{fontFamily:"Caveat",fontSize:"1.3rem"}}>{card.description}</p>
       <p style={{ color: 'green' }}>Phone: {card.phone}</p>
