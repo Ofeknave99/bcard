@@ -4,14 +4,15 @@
   @import url('https://fonts.googleapis.com/css2?family=Caveat&family=IBM+Plex+Sans:ital,wght@1,100&family=Rubik+Wet+Paint&display=swap');
 
 body{
-  background-color: #8f8383;
+  background-color: rgb(65, 86, 92);
    margin-bottom: 40px;
    height: 100%;
+   color: rgb(255, 255, 255);
+   
 }
 .dark-mode .about-class  {
   background-color: black;
   color: white;
-  
 }
 .dark-mode {
   background-color: black;
@@ -32,7 +33,6 @@ body.dark-mode .about-class {
   background-color: black;
   color: white;
 }
-
 body.dark-mode .footer-content {
   background-color: #333;
   color: white;
@@ -45,14 +45,7 @@ body.dark-mode .footer-content {
   color: #333;
  font-size: 10px;
 }
-
-
-
 .about-class {
-  
-  background-color: #ab9898;
- 
-  color: #333;
   font-size: 27px;
   padding: 20px;
   font-family:Caveat ;
@@ -87,6 +80,6 @@ body.dark-mode .footer-content {
 h1{
  font-family:Caveat ; 
 }
-h3{
+h3,h5{
   font-family:Caveat ;
 }

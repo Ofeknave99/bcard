@@ -47,6 +47,22 @@
       "zip": 12212,
       "state": "isreal",
       "id": 3
+    },
+    {
+      "name": "ערן",
+      "lastName": "נווה",
+      "password": "Eran1234.",
+      "email": "eran@gmail.com",
+      "role": "business",
+      "phone": "0507382050",
+      "image": "https://media.easy.co.il/images/UserThumbs/10003043_1642875985580.jpeg",
+      "city": "קרית שמונה",
+      "housenumber": 13,
+      "country": "ישראל",
+      "street": "דן",
+      "zip": 12212,
+      "state": "ישראל",
+      "id": 4
     }
   ],
   "cards": [

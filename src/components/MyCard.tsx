@@ -32,10 +32,10 @@ const MyCard: FunctionComponent<MyCardProps> = ({ userInfo, cards }) => {
 
   return (
     <>
-     <div className="container col-md-3 mt-5 vh-100  vw-100 ">
+     <div className="container col-md-3 mt-5  vw-100 ">
     <h1>your cards</h1>
       {cardsList.length ? (
-        <div className="container mb-2">
+        <div className="container mb-2 ">
           <div className="row">
             {cardsList.map((card: Card) => (
                <div

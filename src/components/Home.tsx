@@ -80,6 +80,7 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cards }) => {
     <>
     <h1>BCARD</h1>
     <h3>The virtual card for your business</h3>
+    <h5>By clicking on the image you can find out more details</h5>
       {(userInfo.role === 'business' || userInfo.role === 'admin') && (
         <Link to="/AddCard" className="btn btn-success my-2 ">
           <i className="fa-solid fa-address-card"> Add Card</i>
@@ -94,7 +95,8 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cards }) => {
               <div
                 key={card.id}
                 className="card col-md-4 mx-2 mb-3"
-                style={{ width: '18rem' }}
+                style={{ width: '18rem',  boxShadow: "0px 4px 12px rgba(255, 255, 255, 0.5)",borderRadius: "8px",padding: "16px"}}
+               
               >
                   <Link to={`/CardShow/${card.id}`}>
                 <img
