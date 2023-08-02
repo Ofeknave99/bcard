@@ -41,7 +41,7 @@ const MyCard: FunctionComponent<MyCardProps> = ({ userInfo, cards }) => {
                <div
                 key={card.id}
                 className="card col-md-4 mx-2 mb-3"
-                style={{ width: '18rem' }}
+                style={{ width: '18rem',  boxShadow: "0px 4px 12px rgba(255, 255, 255, 0.5)",borderRadius: "8px",padding: "16px"}}
               >
                 <img
                   src={card.image}

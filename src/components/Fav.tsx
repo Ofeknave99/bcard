@@ -43,7 +43,7 @@ const Fav: FunctionComponent<FavProps> = ({ userInfo }) => {
                 <div
                 key={card.id}
                 className="card col-md-4 mx-2 mb-3"
-                style={{ width: '18rem' }}
+          style={{ width: '18rem',  boxShadow: "0px 4px 12px rgba(255, 255, 255, 0.5)",borderRadius: "8px",padding: "16px"}}
               >
                 <img
                   src={card.image}
@@ -66,9 +66,9 @@ const Fav: FunctionComponent<FavProps> = ({ userInfo }) => {
                     className="btn btn-danger"
                     onClick={() => handleDeleteFromFav(card.id as number)}
                   >
-                    Remove from Favorites
+                      Remove Favorite
                   </button>
-                  <button className="btn btn-success ">
+                  <button className="btn btn-success mx-2 ">
   <a href={`tel:${card.phone}`} style={{ color: 'white', textDecoration: 'none' }}>
     <i className="fa-solid fa-phone"></i>
   </a>

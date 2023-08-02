@@ -23,7 +23,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ userInfo, setUserInfo, darkMod
     <nav className={`navbar navbar-expand-lg ${darkMode ? 'navbar-dark bg-dark' : 'navbar-light bg-light'}`}>
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/Home">
-          B<img src="id-card.png" alt="card" style={{width:50,height:50}} />CARD
+          B<img src="id-card.png" alt="card" style={{width:40,height:35}} />CARD
         </NavLink>
         <button
           className="navbar-toggler"
