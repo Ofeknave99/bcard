@@ -121,7 +121,7 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cards }) => {
                     Address: {card.country} {card.city} {card.street}  {card.Hosenumber}
                   </p>
                        <hr />
-                  {userInfo.role === 'admin' || (userInfo.role === 'business' && userInfo.email === card.email) ? (
+                  {userInfo.role === 'admin' || (userInfo.role === 'business' && userInfo.email === card.owner) ? (
                     <>
                       <p className="card-text">Card Number: {card.zip}</p>
                       <Link to={`/update/Card/${card.id}`} className="btn btn-warning mx-1">

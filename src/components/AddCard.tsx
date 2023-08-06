@@ -1,22 +1,25 @@
-import React, { useState } from "react";
 import { useFormik } from "formik";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import Card from "../interfaces/Card";
 import { addCard } from "../services/CardService";
 import { successMsg } from "../services/feedbackServicw";
 import MyCard from "./MyCard";
+import { userInfo } from "os";
 
-interface AddCardProps {}
+interface AddCardProps {
+userInfo:any;
+}
 
-const AddCard: FunctionComponent<AddCardProps> = () => {
+const AddCard: FunctionComponent<AddCardProps> = ({userInfo }) => {
   const navigate = useNavigate();
   const [cards, setCards] = useState<Card[]>([]);
 
   const formik = useFormik({
     initialValues: {
       id: undefined,
+      owner:`${userInfo.email}`,
       title: "",
       sutitle: "",
       description: "",
@@ -141,7 +144,6 @@ const AddCard: FunctionComponent<AddCardProps> = () => {
               Email
             </label>
             <input
-            placeholder="Put the email you used to connect to the website so you can edit your card"
               type="email"
               id="email"
               name="email"

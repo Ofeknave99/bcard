@@ -1,6 +1,7 @@
 export default interface Card{
     
     id?:number;
+    owner:string,
     title:string;
     sutitle:string;
     description:string;

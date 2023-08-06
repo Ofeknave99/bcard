@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import Card from '../interfaces/Card';
-import { getCardByEmail, deleteCard } from '../services/CardService';
+import { deleteCard, getCardByOwner } from '../services/CardService';
 import { Link } from 'react-router-dom';
 import { successMsg } from '../services/feedbackServicw';
 
@@ -14,7 +14,7 @@ const MyCard: FunctionComponent<MyCardProps> = ({ userInfo, cards }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    getCardByEmail(userInfo.email) 
+    getCardByOwner(userInfo.email) 
       .then((res) => setCardsList(res.data))
       .catch((err) => console.log(err));
   }, [userInfo.email]); 
@@ -92,4 +92,3 @@ const MyCard: FunctionComponent<MyCardProps> = ({ userInfo, cards }) => {
 };
 
 export default MyCard;
-

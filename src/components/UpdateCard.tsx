@@ -23,6 +23,7 @@ const UpdateCard: FunctionComponent<UpdateCardProps> = () => {
 
   let formik = useFormik({
     initialValues: {
+      owner:"",
       title: card?.title || "",
       sutitle: card?.sutitle || "",
       description: card?.description || "",

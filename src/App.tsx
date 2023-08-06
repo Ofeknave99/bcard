@@ -55,7 +55,7 @@ const App: FunctionComponent = () => {
           <Route path="/Profile" element={<Profile />} />
           <Route path="/SenBox" element={<SenBox />} />
            <Route path="/CardShow/:id" element={<CardShow />} />
-          <Route path="/AddCard" element={<AddCard />} />
+          <Route path="/AddCard" element={<AddCard userInfo={userInfo}   />} />
           <Route path="/update/Card/:id" element={<UpdateCard />} />
           <Route path="/Fav" element={<Fav userInfo={userInfo} />} />
         </Routes>

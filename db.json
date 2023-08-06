@@ -80,7 +80,8 @@
       "street": "חרושת",
       "Hosenumber": 20,
       "zip": 12212,
-      "id": 1
+      "id": 1,
+      "owner": "ofeknave99@gmail.com"
     },
     {
       "title": "נדב פרץ עיצוב שיער",
@@ -96,7 +97,8 @@
       "street": "רסקו",
       "Hosenumber": 12,
       "zip": 122855,
-      "id": 2
+      "id": 2,
+      "owner": "ofeknave99@gmail.com"
     },
     {
       "title": "nice to meat",
@@ -112,7 +114,8 @@
       "street": "סונול",
       "Hosenumber": 1,
       "zip": 12514,
-      "id": 3
+      "id": 3,
+      "owner": "ofeknave99@gmail.com"
     },
     {
       "title": "מאמא חלסה",
@@ -128,7 +131,8 @@
       "street": "אזור תעשיה דרומי",
       "Hosenumber": 5,
       "zip": 15121318,
-      "id": 4
+      "id": 4,
+      "owner": "ofeknave99@gmail.com"
     }
   ],
   "favs": [

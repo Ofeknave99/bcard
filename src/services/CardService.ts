@@ -12,8 +12,8 @@ export function getCard() {
 export function getCardById(id: number) {
   return axios.get(`${api}/${id}`);
 }
-export function getCardByEmail(email: string) {
-  return axios.get(`${api}?email=${email}`);
+export function getCardByOwner(owner: string) {
+  return axios.get(`${api}?owner=${owner}`);
 }
 
 
