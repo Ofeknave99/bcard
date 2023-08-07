@@ -78,49 +78,51 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cards }) => {
 
   return (
     <>
-    <h1>BCARD</h1>
-    <h3>The virtual card for your business</h3>
-    <h5>By clicking on the image you can find out more details</h5>
-      {(userInfo.role === 'business' || userInfo.role === 'admin') && (
-        <Link to="/AddCard" className="btn btn-success my-2 ">
+     <h1>BCARD</h1>
+      <h3>The virtual card for your business</h3>
+      <h5>By clicking on the image you can find out more details</h5>
+      {userInfo.role === 'business' || userInfo.role === 'admin' ? (
+        <Link to="/AddCard" className="btn btn-success my-2">
           <i className="fa-solid fa-address-card"> Add Card</i>
         </Link>
-      )}
-       
+      ) : null}
+
       {cardsList.length ? (
-        <div className="container mb-2 ">
-          <div className="row">
+        <div className="container-fluid mb-2">
+          <div className="row d-flex justify-content-center">
             {cardsList.map((card: Card) => (
-              
               <div
                 key={card.id}
                 className="card col-md-4 mx-2 mb-3"
-                style={{ width: '18rem',  boxShadow: "0px 4px 12px rgba(255, 255, 255, 0.5)",borderRadius: "8px",padding: "16px"}}
-               
+                style={{
+                  width: '18rem',
+                  boxShadow: '0px 4px 12px rgba(255, 255, 255, 0.5)',
+                  borderRadius: '8px',
+                  padding: '16px',
+                }}
               >
-                  <Link to={`/CardShow/${card.id}`}>
-                <img
-                  src={card.image}
-                  className="card-img-top"
-                  alt={card.title}
-                  style={{ width: '100%', height: '16.5rem' }}
-                /> 
+                <Link to={`/CardShow/${card.id}`}>
+                  <img
+                    src={card.image}
+                    className="card-img-top"
+                    alt={card.title}
+                    style={{ width: '100%', height: '16.5rem' }}
+                  />
                 </Link>
-           
+
                 <hr />
-                
+
                 <div className="card-body">
-                  
                   <h5 className="card-title">{card.title}</h5>
-                       <hr />
-                        <p className="card-text "> {card.sutitle}</p>
-                        <hr />
+                  <hr />
+                  <p className="card-text "> {card.sutitle}</p>
+                  <hr />
                   <p className="card-text text-success">Phone: {card.phone}</p>
-                       <hr />
+                  <hr />
                   <p className="card-text">
-                    Address: {card.country} {card.city} {card.street}  {card.Hosenumber}
+                    Address: {card.country} {card.city} {card.street} {card.Hosenumber}
                   </p>
-                       <hr />
+                  <hr />
                   {userInfo.role === 'admin' || (userInfo.role === 'business' && userInfo.email === card.owner) ? (
                     <>
                       <p className="card-text">Card Number: {card.zip}</p>
@@ -136,7 +138,6 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cards }) => {
                       </Link>
                     </>
                   ) : null}
-
 
    {(userInfo.role === 'regular' || userInfo.role === 'admin' || userInfo.role === 'business') && !favoriteCards.includes(card.id as number) && !isLoading && (
     

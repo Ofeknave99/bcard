@@ -5,6 +5,7 @@ import Card from "../interfaces/Card";
 import * as yup from "yup";
 import { successMsg } from "../services/feedbackServicw";
 import { useFormik } from "formik";
+import { log } from "console";
 
 
 
@@ -23,7 +24,7 @@ const UpdateCard: FunctionComponent<UpdateCardProps> = () => {
 
   let formik = useFormik({
     initialValues: {
-      owner:"",
+      owner:card?.owner||"",
       title: card?.title || "",
       sutitle: card?.sutitle || "",
       description: card?.description || "",
@@ -54,7 +55,7 @@ const UpdateCard: FunctionComponent<UpdateCardProps> = () => {
       Hosenumber: yup.number().required("House Number is required"),
       zip: yup.number().required("Zip is required"),
     }),
-    onSubmit: async (values: Card) => {
+    onSubmit: async (values: Card) => {    
   updateCard(values, Number(id))
     .then((res) => {
       navigate("/home"); 
