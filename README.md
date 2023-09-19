@@ -68,14 +68,5 @@ Regular User: Regular users can view and add virtual business cards to their fav
 About
 The "About" page provides information about the application, its purpose, and its features.
 
-Contributing
-If you'd like to contribute to this project, please follow these steps:
 
-Fork the repository
-Create a new branch for your feature or bug fix
-Make your changes
-Test your changes thoroughly
-Create a pull request explaining your changes and why they should be merged
-License
-This project is licensed under the MIT License.
 
