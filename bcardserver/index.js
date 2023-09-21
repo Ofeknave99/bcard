@@ -18,7 +18,7 @@ mongoose
   .catch((err) => console.log(err));
 
     app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(chalk.bgWhite(`Server is running on port ${PORT}`));
 });
     app.use(express.json());
     app.use(cors());
